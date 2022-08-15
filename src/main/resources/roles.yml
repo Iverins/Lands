@@ -65,6 +65,7 @@ land:
       # Using ALL instead of a list will give this role all player flags. Flags which are only for admin lands won't be set for this role.
       default: 'ALL'
 
+    # This role can be deleted, in case you don't want it.
     admin:
       name: '&c&lAdmin'
       # The icon supports texture values (example: https://minecraft-heads.com/) and normal material values.
@@ -132,7 +133,7 @@ land:
         - VEHICLE_USE
         - ITEM_PICKUP
 
-    # NOTE: The nation role can not be deleted.
+    # This role can be deleted, in case you don't want it.
     nation:
       name: '&9&lNation'
       # The icon supports texture values (example: https://minecraft-heads.com/) and normal material values.
@@ -176,7 +177,7 @@ land:
         - ITEM_PICKUP
         - LAND_CLAIM_BORDER
 
-    # NOTE: The ally role can not be deleted.
+    # This role can be deleted, in case you don't want it.
     ally:
       name: '&a&lAlly'
       # The icon supports texture values (example: https://minecraft-heads.com/) and normal material values.

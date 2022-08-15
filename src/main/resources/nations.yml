@@ -1,6 +1,3 @@
-# This feature is still work in progress. Please report any issues to us via Discord or private message on the forums.
-# Feel free to send us some feedback/suggestions in the Discord server. :)
-
 # Enable nations? (Command: /Nations)
 # NOTE: This setting requires server reload / restart.
 enabled: true
@@ -27,29 +24,20 @@ rename:
 taxes:
   # Set the maximum tax value the nation should be able to set PER CHUNK of their lands?
   # NOTE: Final payment would be for each land: land size (chunks) * cost
-  max-value: 75.0
+  max: 5.0
   # Use the configured land upkeep as the minimum amount
   # Should a land be removed from the nation, if it can't pay the tax?
   remove-land: true
-  # Set the minimum time between a player's attempt to change the tax for their nation and the time of the next tax.
-  # NOTE: This option should be lower than interval_2 from config.yml (interval of upkeep).
-  change-cooldown: 2d
+
 
 # Let a nation pay money to the server in order to keep it up.
 upkeep:
   enabled_4: true
-  # Set the upkeep costs for a nation per chunk
-  cost: 50.0
+  # Set the upkeep costs for a nation per chunk.
+  per-chunk: 3.0
   # Should a nation get deleted if it can't pay the upkeep costs?
   # NOTE: This does not delete any lands.
   delete-nation: true
-  # Interval of payment
-  # TimeUnits:
-  # Seconds: s
-  # Minutes: m
-  # Hours: h
-  # Days: d
-  interval_2: 15d
   # Exclude nation from upkeep, if it was recently created?
   # This excludes nations from their first upkeep payment, if they're younger than x time.
-  nopay-time: 2d
+  nopay_time: 2d

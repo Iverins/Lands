@@ -7,7 +7,7 @@ website: 'https://www.spigotmc.org/resources/53313'
 api-version: '1.13'
 load: POSTWORLD
 
-softdepend: [ Vault, dynmap, BlueMap, HolographicDisplays, CMI, WorldGuard, WorldEdit, PlaceholderAPI, MythicMobs, Residence, GriefPrevention, squaremap, UltraRegions ]
+softdepend: [ Vault, dynmap, BlueMap, HolographicDisplays, CMI, WorldGuard, WorldEdit, PlaceholderAPI, MythicMobs, Residence, GriefPrevention, squaremap, UltraRegions, floodgate, Sentinel ]
 
 
 #libraries:
@@ -309,80 +309,87 @@ permissions:
 
 
 
-      lands.role.*:
+      lands.role.setting.*:
         description: Allow players to toggle all role flags.
         children:
-          lands.role.setting.*:
-            description: Access to all role settings (toggle)
-            children:
-              lands.role.setting.block_break:
-                description: Allow players to toggle the 'block_break' flag.
-              lands.role.setting.block_place:
-                description: Allow players to toggle the 'block_place' flag.
-              lands.role.setting.attack_player:
-                description: Allow players to toggle the 'attack_player' flag.
-              lands.role.setting.attack_animal:
-                description: Allow players to toggle the 'attack_animal' flag.
-              lands.role.setting.block_ignite:
-                description: Allow players to toggle the 'block_ignite' flag.
-              lands.role.setting.interact_general:
-                description: Allow players to toggle the 'interact_general' flag.
-              lands.role.setting.interact_door:
-                description: Allow players to toggle the 'interact_door' flag.
-              lands.role.setting.interact_container:
-                description: Allow players to toggle the 'interact_container' flag.
-              lands.role.setting.interact_mechanism:
-                description: Allow players to toggle the 'interact_mechanism' flag.
-              lands.role.setting.interact_villager:
-                description: Allow players to toggle the 'interact_villager' flag.
-              lands.role.setting.fly:
-                description: Allow players to toggle the 'fly' flag.
-              lands.role.setting.land_enter:
-                description: Allow players to toggle the 'land_enter' flag.
-              lands.role.setting.player_trust:
-                description: Allow players to toggle the 'player_trust' flag.
-              lands.role.setting.player_untrust:
-                description: Allow players to toggle the 'player_untrust' flag.
-              lands.role.setting.player_setrole:
-                description: Allow players to toggle the 'player_setrole' flag.
-              lands.role.setting.land_claim:
-                description: Allow players to toggle the 'land_claim' flag.
-              lands.role.setting.land_claim_border:
-                description: Allow players to toggle the 'land_claim_border' flag.
-              lands.role.setting.spawn_set:
-                description: Allow players to toggle the 'spawn_set' flag.
-              lands.role.setting.spawn_teleport:
-                description: Allow players to toggle the 'spawn_teleport' flag.
-              lands.role.setting.balance_withdraw:
-                description: Allow players to toggle the 'balance_withdraw' flag.
-              lands.role.setting.area_assign:
-                description: Allow players to toggle the 'area_assign' flag.
-              lands.role.setting.setting_edit_land:
-                description: Allow players to toggle the 'setting_edit_land' flag.
-              lands.role.setting.setting_edit_role:
-                description: Allow players to toggle the 'setting_edit_role' flag.
-              lands.role.setting.setting_edit_taxes:
-                description: Allow players to toggle the 'setting_edit_taxes' flag.
-              lands.role.setting.vehicle_use:
-                description: Allow players to toggle the 'vehicle_use' flag.
-              lands.role.setting.attack_monster:
-                description: Allow players to toggle the 'attack_monster' flag.
-              lands.role.setting.ender_pearl:
-                description: Allow players to toggle the 'ender_pearl' flag.
-              lands.role.setting.interact_trapdoor:
-                description: Allow players to toggle the 'interact_trapdoor' flag.
-              lands.role.setting.item_pickup:
-                description: Allow players to toggle the 'item_pickup' flag.
-              lands.role.setting.land_rename:
-                description: Allow players to toggle the 'land_rename' flag.
-              lands.role.setting.player_ban:
-                description: Allow players to toggle the 'player_ban' flag.
-              lands.role.setting.setting_edit_various:
-                description: Allow players to toggle the 'setting_edit_various' flag.
-              lands.role.setting.trample_farmland:
-                description: Allow players to toggle the 'trample_farmland' flag.
-              lands.role.setting.war_manage:
-                description: Allow players to toggle the 'war_manage' flag.
+            lands.role.setting.block_break:
+              description: Allow players to toggle the 'block_break' flag.
+            lands.role.setting.block_place:
+              description: Allow players to toggle the 'block_place' flag.
+            lands.role.setting.attack_player:
+              description: Allow players to toggle the 'attack_player' flag.
+            lands.role.setting.attack_animal:
+              description: Allow players to toggle the 'attack_animal' flag.
+            lands.role.setting.block_ignite:
+              description: Allow players to toggle the 'block_ignite' flag.
+            lands.role.setting.interact_general:
+              description: Allow players to toggle the 'interact_general' flag.
+            lands.role.setting.interact_door:
+              description: Allow players to toggle the 'interact_door' flag.
+            lands.role.setting.interact_container:
+              description: Allow players to toggle the 'interact_container' flag.
+            lands.role.setting.interact_mechanism:
+              description: Allow players to toggle the 'interact_mechanism' flag.
+            lands.role.setting.interact_villager:
+              description: Allow players to toggle the 'interact_villager' flag.
+            lands.role.setting.fly:
+              description: Allow players to toggle the 'fly' flag.
+            lands.role.setting.land_enter:
+              description: Allow players to toggle the 'land_enter' flag.
+            lands.role.setting.player_trust:
+              description: Allow players to toggle the 'player_trust' flag.
+            lands.role.setting.player_untrust:
+              description: Allow players to toggle the 'player_untrust' flag.
+            lands.role.setting.player_setrole:
+              description: Allow players to toggle the 'player_setrole' flag.
+            lands.role.setting.land_claim:
+              description: Allow players to toggle the 'land_claim' flag.
+            lands.role.setting.land_claim_border:
+              description: Allow players to toggle the 'land_claim_border' flag.
+            lands.role.setting.spawn_set:
+              description: Allow players to toggle the 'spawn_set' flag.
+            lands.role.setting.spawn_teleport:
+              description: Allow players to toggle the 'spawn_teleport' flag.
+            lands.role.setting.balance_withdraw:
+              description: Allow players to toggle the 'balance_withdraw' flag.
+            lands.role.setting.area_assign:
+              description: Allow players to toggle the 'area_assign' flag.
+            lands.role.setting.setting_edit_land:
+              description: Allow players to toggle the 'setting_edit_land' flag.
+            lands.role.setting.setting_edit_role:
+              description: Allow players to toggle the 'setting_edit_role' flag.
+            lands.role.setting.setting_edit_taxes:
+              description: Allow players to toggle the 'setting_edit_taxes' flag.
+            lands.role.setting.vehicle_use:
+              description: Allow players to toggle the 'vehicle_use' flag.
+            lands.role.setting.attack_monster:
+              description: Allow players to toggle the 'attack_monster' flag.
+            lands.role.setting.ender_pearl:
+              description: Allow players to toggle the 'ender_pearl' flag.
+            lands.role.setting.interact_trapdoor:
+              description: Allow players to toggle the 'interact_trapdoor' flag.
+            lands.role.setting.item_pickup:
+              description: Allow players to toggle the 'item_pickup' flag.
+            lands.role.setting.land_rename:
+              description: Allow players to toggle the 'land_rename' flag.
+            lands.role.setting.player_ban:
+              description: Allow players to toggle the 'player_ban' flag.
+            lands.role.setting.setting_edit_various:
+              description: Allow players to toggle the 'setting_edit_various' flag.
+            lands.role.setting.trample_farmland:
+              description: Allow players to toggle the 'trample_farmland' flag.
+            lands.role.setting.war_manage:
+              description: Allow players to toggle the 'war_manage' flag.
+
+
+
+      lands.player.setting:
+        description: Allow players to toggle all personal flags.
+        children:
+          lands.player.setting.enter_messages:
+            description: Allow players to toggle the 'enter_messages' flag.
+          lands.player.setting.receive_invites:
+            description: Allow players to toggle the 'receive_invites' flag.
 
 
 
@@ -454,13 +461,15 @@ permissions:
         description: Access to all /wars commands.
         children:
           wars.command.declare:
-            description: Access to /Wars declare
+            description: Access to /wars declare
           wars.command.deny:
-            description: Access to /Wars deny
+            description: Access to /wars deny
           wars.command.info:
-            description: Access to /Wars info
+            description: Access to /wars info
           wars.command.menu:
-            description: Access to /Wars menu
+            description: Access to /wars menu
+          wars.command.spawn:
+            description: Access to /wars spawn
 
 
 
@@ -477,24 +486,26 @@ permissions:
         description: Access to all Nations commands.
         children:
           nations.command.accept:
-            description: /Nations accept
+            description: /nations accept
           nations.command.create:
-            description: /Nations create
+            description: /nations create
           nations.command.delete:
-            description: /Nations delete
+            description: /nations delete
           nations.command.deny:
-            description: /Nations deny
+            description: /nations deny
           nations.command.leave:
-            description: /Nations leave
+            description: /nations leave
+          nations.command.top:
+            description: /nations top
           nations.command.menu:
-            description: /Nations menu
+            description: /nations menu
           nations.command.rename:
-            description: /Nations rename
+            description: /nations rename
           nations.command.setcapital:
-            description: /Nations setcapital
+            description: /nations setcapital
           nations.command.spawn:
-            description: /Nations spawn
+            description: /nations spawn
           nations.command.trust:
-            description: /Nations trust
+            description: /nations trust
           nations.command.untrust:
-            description: /Nations untrust
+            description: /nations untrust

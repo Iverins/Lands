@@ -41,10 +41,14 @@ declaration:
 points:
   # Get x points per kill
   kill: 1
-  # Get x points per capture
-  capture: 5
-  # Get x points if you destroy a capture block of the enemy.
-  cap-destroy: 3
+  # Capture block points
+  capture-block:
+    # Get x points, if you capture a capture block.
+    capture: 5
+    # Get x points, if you break a capture block of the enemy.
+    break: 3
+    # Get x points, if you explode a capture block of the enemy.
+    explode: 5
   # How many points does a team need to win?
   # Calculation: <team with the smallest amount of members> * towin-per-player
   towin:

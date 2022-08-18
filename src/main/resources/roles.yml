@@ -14,6 +14,7 @@ land:
     - BLOCK_BREAK
     - PLANT
     - HARVEST
+    - SHEAR
     - BLOCK_IGNITE
     - INTERACT_GENERAL
     - INTERACT_CONTAINER
@@ -78,6 +79,7 @@ land:
         - BLOCK_BREAK
         - PLANT
         - HARVEST
+        - SHEAR
         - INTERACT_GENERAL
         - INTERACT_DOOR
         - INTERACT_TRAPDOOR
@@ -114,6 +116,7 @@ land:
         - BLOCK_BREAK
         - PLANT
         - HARVEST
+        - SHEAR
         - INTERACT_GENERAL
         - INTERACT_DOOR
         - INTERACT_TRAPDOOR
